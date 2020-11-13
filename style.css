@@ -1,0 +1,38 @@
+/* style.css */
+
+h2 {
+  color: red;
+}
+
+a {
+  background: yellow;
+  color: black;
+}
+
+ul a {
+  background: brown;
+  color: white;
+}
+
+.title-chapter-1 {
+  color: #333;
+}
+
+.chapter-title {
+  border: 3px solid green;
+  color: lightgreen;
+  margin-top: 50px;
+  padding: 12px;
+}
+
+.recipe {
+  background: green;
+  color: white;
+  padding: 16px;
+  width: 500px;
+}
+
+.important {
+    color: red;
+    font-weight: 700;
+}

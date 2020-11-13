@@ -1,0 +1,182 @@
+<!-- 
+The DOCTYPE must be placed on top of every HTML document. It ensures that the browser
+renders the HTML document correctly. If you are curious, you can read more about it here:
+
+https://developer.mozilla.org/en-US/docs/Glossary/Doctype
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS: Cascading Style Sheet
+      Let's use an external css file. Another option, less common, but acceptable if you
+      have a single page website, is to put your css inside the style tags <style></style>
+      inside the <head> of your HTML
+    -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <!-- Here starts the actual page, what we will see on the browser -->
+  <body>
+    <!-- We have 6 heading tags, from <h1> to <h6> 
+      They are used to add titles to the whole page or to individual sections.
+      The numbers establish a hierarchy of importance, with <h1> being the most important to <h6>,
+        the least important.
+      If we don't change their appearance through CSS, the browser will apply some default styles,
+      making them to appear bigger or smaller. But avoid mixing the size with the importance. To a search engine, <h1> will always be more important.
+      IMPORTANT: use only one <h1> tag in your page.
+
+      Read more about it here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+
+        -> use your developer tools to looks at the page itself and how it uses the different levels of headings
+        -> read carefully the section on accessibility concerns
+
+      -->
+      <h1>Main title of the page</h1>
+      <h2>Sub heading of the page</h2>
+      <h3>Some section title</h3>
+
+      <h3>Some other section title</h3>
+      <h4>The sub heading of a section</h4>
+
+      <!-- Create lists using <ul> and <ol>, for unordered and ordered lists. 
+        Inside, create individual list items with the <li> tag.
+
+          If we add links to a list, we can have a simple navigation for our website.
+        -->
+
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html">contanct</a></li>
+    </ul>
+
+    <h3>Recipe:</h3>
+    <ol>
+      <li>mix flour and water</li>
+      <li>add tomatoes</li>
+      <li>add cheese</li>
+      <li>eat pizza</li>
+    </ol>
+
+    <!-- <div> elements are useful to wrap other HTML elements to style them differently, or
+      simply to change the structure of your HTML page -->
+    <!-- never use inline CSS like I'm doing here, it's just for the example -->
+
+    <div style="background: green; color: white; padding: 16px; width: 500px;">
+      <h3>Another recipe:</h3>
+      <ol>
+        <li>peel potatoes</li>
+        <li>slice potatoes</li>
+        <li>fry</li>
+        <li>eat</li>
+      </ol>
+    </div>
+
+    <!-- Let's separate those two lists with a horizontal line -->
+    <hr>
+    <!-- HTML elements can have attributes, which let us add or change some properties.
+      Not every element has the same attributes.
+      For example, links, the <a> element, have the special href attribute which we use to
+        link to another resource, a URL or another HTML page.
+
+      Each element can have the id and class attributes. We can use those to then change the style
+      of the element through CSS.
+
+      Except for the exercises we do in class, it's best to avoid relying on id for styling.
+
+      An element can have as many class as you want, just separate them with a space:
+      class="class1 class2 class3"
+
+      On the other hand, elements can have only one id, and each id must be UNIQUE inside the page. Meaning, you can't use the same id twice. Neither three or four times etc.
+    -->
+
+    <div class="recipe">
+      <h3>Same recipe, with more class:</h3>
+      <ol>
+        <li>peel potatoes</li>
+        <li>slice potatoes</li>
+        <li>fry</li>
+        <li>eat</li>
+      </ol>
+    </div>
+
+    <!-- <span> elements are similar to <div>, but they work inline, for example to mark 
+      individual words inside of a <p>, a paragraph 
+        -->
+    <p>This paragraph has a <span class="important">span</span> inside of it</p>
+
+    <!-- You can always go to a new line using the <br> element. -->
+    <p>What a nice paragraph.<br>
+      On a new line.
+    </p>
+
+    <!-- Some elements are a bit different than others, and don't have a closing tag.
+      Images are one of those elements. The content of an image, the image itself, is specified
+      with the src attribute.
+      In the src attribute you can put a url of an image, or a path to an image on your computer. 
+
+      Images have other two important attributes, the alt text and the title:
+      alt: it appears if the image couldn't be loaded for any reason. It should be used as an alternative to the image itself, possibly describing its content.
+      title: it's the title of the image, and it appears if you hover with your mouse on the picture
+    -->
+    <img
+      src="https://images-na.ssl-images-amazon.com/images/I/51pG5REYl+L._SX258_BO1,204,203,200_.jpg"
+    7/>
+
+    <img alt="a picture with the characters Rick and Morty" title="this is the image title" src="images/rickandmorty.jpg" />
+
+    <!-- We have a few HTML elements called semantic elements. You can read more about them here, in the
+      https://developer.mozilla.org/en-US/docs/Glossary/Semantics
+
+      You can skip the sections about JavaScript and CSS, for now.
+    -->
+
+    <!-- Semantic elements give meaning to our content. For example, to a search engine, a date inside 
+        a div doesn't mean anything. It's just a series of characters, but it can be anything:
+        - a mathematical operation
+        - a weird telephone number
+        - the name of a Star Wars character
+
+        Using the proper HTML element we can specify that it's a date
+       -->
+    <div>2020-11-12</div>
+    <time datetime="2020-11-12">2020-11-12</time>
+
+
+    <!-- <table> elements must be used exclusively to represent tabular data, like in an Excel sheet.
+      Nowadays they are still used for layouts if you have to design emails, but it's a very annoying
+      process and I hope you don't ever have to do that.
+      -->
+    <table>
+      <tr>
+        <th>column 1</th>
+        <th>column 2</th>
+        <th>column 3</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+  </body>
+</html>
